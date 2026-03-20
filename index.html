@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳藝方的履歷表</title>
+    <style>
+        /* 整體樣式設定 */
+        body {
+            font-family: "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* 履歷主容器 */
+        .resume-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative; /* 為了放置右上方按鈕 */
+        }
+
+        /* 左上角標題區塊 (含照片與基本資料) */
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* 照片樣式 */
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%; /* 圓形照片，若要方角請改成 10px */
+            margin-right: 30px;
+            border: 3px solid #eee;
+        }
+
+        /* 基本資料文字 */
+        .info-text h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+            color: #2c3e50;
+        }
+        .info-text p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* 大標題樣式 (如：關於我、核心技能) */
+        h2 {
+            color: #0099ff; /* 截圖中的藍色 */
+            font-size: 24px;
+            border-left: 5px solid #0099ff;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* 小標題樣式 (如：亞洲大學、專案名稱) */
+        h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /* 時間與副標題樣式 (灰色文字) */
+        .date-subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* 段落文字 */
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: justify; /* 文字對齊 */
+        }
+
+        /* 技能標籤容器 */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 技能標籤樣式 (藍色圓角) */
+        .skill-tag {
+            background-color: #0099ff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* 列表樣式 (用於語言能力) */
+        ul {
+            padding-left: 20px;
+            margin-top: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* 專案與榮譽區塊的邊框裝飾 (模擬截圖樣式) */
+        .entry-block {
+            border-left: 2px solid #eee;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .entry-block::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+        }
+
+        /* 模擬右上角的藍色按鈕 */
+        .top-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .mock-button {
+            width: 35px;
+            height: 35px;
+            background-color: #0099ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* 手機版適應 (RWD) */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .resume-container {
+                padding: 20px;
+            }
+            .top-buttons {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+    
+    <div class="top-buttons">
+        <div class="mock-button">🌙</div> <div class="mock-button">🖨️</div> </div>
+
+    <div class="header">
+        <img src="profile.jpg" alt="陳藝方個人照" class="profile-pic">
+        <div class="info-text">
+            <h1>陳藝方</h1>
+            <p><strong>學校：</strong>亞洲大學 (Asia University)</p>
+            <p><strong>學號：</strong>114018013</p>
+            <p><strong>電子郵件：</strong>114018013@asia.edu.tw</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>關於我</h2>
+        <p>
+            目前就讀於亞洲大學，對資訊技術與解決問題充滿熱情。在校期間致力於網頁開發與數據分析學習，具備良好的團隊合作能力與自我驅動力。
+        </p>
+    </section>
+
+    <section>
+        <h2>核心技能</h2>
+        <div class="skills-container">
+            <span class="skill-tag">HTML5 / CSS3</span>
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">UI/UX Design</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">MySQL</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>語言能力</h2>
+        <ul>
+            <li>中文 (母語)</li>
+            <li>英文 (TOEIC 750+)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>學歷資料</h2>
+        <div class="entry-block">
+            <h3>亞洲大學 (Asia University)</h3>
+            <p class="date-subtitle">2021年 9月 - 在讀中</p>
+            <p>
+                資訊學院 / 相關科系<br>
+                主修網頁工程、演算法分析。在校平均成績：GPA 3.8/4.0
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>專案經驗</h2>
+        
+        <div class="entry-block">
+            <h3>個人履歷開發專案</h3>
+            <p class="date-subtitle">2024年 3月</p>
+            <p>使用 HTML/CSS 獨立設計並實作回應式網頁履歷，優化列印樣式與使用者互動體驗。</p>
+        </div>
+
+        <div class="entry-block">
+            <h3>校園導覽行動應用 (課程專案)</h3>
+            <p class="date-subtitle">2023年 10月 - 2024年 1月</p>
+            <p>與小組共同開發基於 GPS 的校園地圖應用，協助新生快速熟悉亞洲大學校園環境。</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>榮譽獎項</h2>
+        
+        <div class="entry-block">
+            <h3>校內程式設計比賽 - 優等</h3>
+            <p class="date-subtitle">2023年 5月</p>
+        </div>
+
+        <div class="entry-block">
+            <h3>書卷獎 (President's Award)</h3>
+            <p class="date-subtitle">2022年 第二學期</p>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

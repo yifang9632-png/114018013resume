@@ -1,0 +1,74 @@
+/* 1. 基礎頁面設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+}
+
+/* 2. 核心兩欄版型控制 */
+/* 假設你的 HTML 內有一個最大的容器（如 main 或 div），我們將其轉為 Flex 佈局 */
+body > div, body > main {
+    display: flex;           /* 開啟彈性佈局 */
+    flex-direction: row;     /* 左右排列 */
+    width: 900px;            /* 模擬 A4 寬度 */
+    min-height: 100vh;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* 3. 左側深色側邊欄設定 */
+/* 我們利用 CSS 選擇器，選取第一個區塊作為側邊欄 */
+body > div > section:first-child, 
+body > main > section:first-child,
+aside {
+    width: 35% !important;   /* 固定寬度 */
+    background-color: #3d3d3d !important; /* 深灰色 */
+    color: #ffffff !important;
+    padding: 40px 25px !important;
+}
+
+/* 4. 右側主要內容區塊設定 */
+/* 選取剩下的內容作為主欄位 */
+body > div > section:not(:first-child),
+body > main > section:not(:first-child),
+article {
+    width: 65% !important;
+    padding: 40px !important;
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+/* 5. 圖片修飾：讓照片變圓形並置中（比照圖片） */
+img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;      /* 圓形 */
+    border: 5px solid #ffffff;
+    margin: 0 auto 20px;
+    object-fit: cover;
+}
+
+/* 6. 標題與文字風格優化 */
+h1, h2, h3 {
+    text-transform: uppercase; /* 轉為大寫，更有設計感 */
+    letter-spacing: 1px;
+}
+
+/* 左側標題顏色 */
+section:first-child h2, 
+section:first-child h3 {
+    color: #00d2ff; /* 給左側一個亮點顏色 */
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+/* 右側標題底線 */
+section:not(:first-child) h2 {
+    border-bottom: 2px solid #3d3d3d;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
